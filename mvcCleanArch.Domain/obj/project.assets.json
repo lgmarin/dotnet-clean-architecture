@@ -13,11 +13,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/home/luiz/Documents/Projects/dotnet-clean-architeture/mvcCleanArch.Domain/mvcCleanArch.Domain.csproj",
+      "projectUniqueName": "/mnt/data/Documents/Projects/dotnet-clean-architeture/mvcCleanArch.Domain/mvcCleanArch.Domain.csproj",
       "projectName": "mvcCleanArch.Domain",
-      "projectPath": "/home/luiz/Documents/Projects/dotnet-clean-architeture/mvcCleanArch.Domain/mvcCleanArch.Domain.csproj",
+      "projectPath": "/mnt/data/Documents/Projects/dotnet-clean-architeture/mvcCleanArch.Domain/mvcCleanArch.Domain.csproj",
       "packagesPath": "/home/luiz/.nuget/packages/",
-      "outputPath": "/home/luiz/Documents/Projects/dotnet-clean-architeture/mvcCleanArch.Domain/obj/",
+      "outputPath": "/mnt/data/Documents/Projects/dotnet-clean-architeture/mvcCleanArch.Domain/obj/",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "/home/luiz/.nuget/NuGet/NuGet.Config"

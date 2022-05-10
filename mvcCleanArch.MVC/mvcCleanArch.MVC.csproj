@@ -19,4 +19,9 @@
     <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="6.0.2" />
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\mvcCleanArch.Infra.IOC\mvcCleanArch.Infra.IOC.csproj" />
+    <ProjectReference Include="..\mvcCleanArch.Infra.Data\mvcCleanArch.Infra.Data.csproj" />
+  </ItemGroup>
+
 </Project>

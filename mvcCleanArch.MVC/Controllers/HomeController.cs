@@ -1,6 +1,6 @@
 ﻿using System.Diagnostics;
 using Microsoft.AspNetCore.Mvc;
-using mvcCleanArch.MVC.Models;
+using mvcCleanArch.Infra.Data.Models;
 
 namespace mvcCleanArch.MVC.Controllers;
 

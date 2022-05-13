@@ -4,7 +4,7 @@ using Microsoft.EntityFrameworkCore;
 using mvcCleanArch.Infra.Data.Context;
 using Microsoft.AspNetCore.Identity;
 
-namespace mvcCleanArch.Infra.Data;
+namespace mvcCleanArch.Infra.IOC;
 
 public static class DependencyInjection
 {

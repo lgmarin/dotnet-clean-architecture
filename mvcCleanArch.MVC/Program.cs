@@ -1,4 +1,4 @@
-using mvcCleanArch.Infra.Data;
+using mvcCleanArch.Infra.IOC;
 using Microsoft.Extensions.Configuration;
 
 var builder = WebApplication.CreateBuilder(args);

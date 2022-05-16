@@ -1,32 +1,50 @@
+using AutoMapper;
 using mvcCleanArch.Application.Interfaces;
 using mvcCleanArch.Application.ViewModels;
+using mvcCleanArch.Domain.Entities;
+using mvcCleanArch.Domain.Interfaces;
 
 namespace mvcCleanArch.Application.Services;
 
 public class ProductService: IProductService
 {
-    public Task<IEnumerable<ProductViewModel>> GetProducts()
+    private IProductRepository _productRepository;
+    private readonly IMapper _mapper;
+
+    //Dependency Injection in the Constructor
+    public ProductService(IMapper mapper, IProductRepository productRepository)
     {
-        throw new NotImplementedException();  
+        _productRepository = productRepository;
+        _mapper = mapper;
     }
 
-    public Task<ProductViewModel> GetById(int? id)
+    public async Task<IEnumerable<ProductViewModel>> GetProducts()
     {
-        throw new NotImplementedException();  
+        var result = await _productRepository.GetProducts();
+        return _mapper.Map<IEnumerable<ProductViewModel>>(result);
+    }
+
+    public async Task<ProductViewModel> GetById(int? id)
+    {
+        var result = await _productRepository.GetById(id);
+        return _mapper.Map<ProductViewModel>(result);
     }
 
     public void Add(ProductViewModel product)
     {
-        throw new NotImplementedException();
+        var mapProduct = _mapper.Map<Product>(product);
+        _productRepository.Add(mapProduct);
     }
 
     public void Update(ProductViewModel product)
     {
-        throw new NotImplementedException();
+        var mapProduct = _mapper.Map<Product>(product);
+        _productRepository.Update(mapProduct);
     }
 
     public void Remove(int? id)
     {
-        throw new NotImplementedException();
+        var product = _productRepository.GetById(id).Result;
+        _productRepository.Remove(product);
     }
 }

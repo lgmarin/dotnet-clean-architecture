@@ -24,16 +24,19 @@ public class ProductRepository : IProductRepository
         return await _context.Products.FindAsync(id);
     }
 
-    void Add(Product product)
+    public void Add(Product product)
     {
-        
+        _context.Add(product);
+        _context.SaveChanges();
     }
-    void Update(Product product)
+    public void Update(Product product)
     {
-
+        _context.Update(product);
+        _context.SaveChanges();
     }
-    void Remove(Product product)
+    public void Remove(Product product)
     {
-
+        _context.Remove(product);
+        _context.SaveChanges();
     }
 }

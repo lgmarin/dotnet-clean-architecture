@@ -18,6 +18,8 @@ Contains the Services, View Models and Interfaces that represents the general bu
 
 The interfaces includes abstractions for operations that will be performed using the Infrastructure layer, such as data access, file system access, networking, and so on.
 
+View Models are responsible for data abstraction, to only show desired properties through the Domain.
+
 Dependencies: Domain
 
 ### Domain
@@ -38,10 +40,11 @@ Contains the Inversion of Control Logic, grants access to the other layers via D
 
 Dependencies: Domain, Application, Infra.Data
 
+
 ## Dependencies
 
 * Entity Framework
-
+* AutoMapper
 
 ## Run
 

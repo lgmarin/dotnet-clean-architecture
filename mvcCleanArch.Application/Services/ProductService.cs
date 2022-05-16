@@ -1,4 +1,4 @@
-using mvcCleanArch.Domain.Interfaces;
+using mvcCleanArch.Application.Interfaces;
 
 namespace mvcCleanArch.Application.Services;
 

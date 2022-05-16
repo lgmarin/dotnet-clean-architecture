@@ -3,7 +3,7 @@ using System.ComponentModel.DataAnnotations;
 
 namespace mvcCleanArch.Application.ViewModels;
 
-public class ProdcutViewModel
+public class ProductViewModel
 {
     public int Id {get; set;}
 

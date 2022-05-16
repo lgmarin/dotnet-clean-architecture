@@ -9,7 +9,7 @@ This MVC project is based on the project available at the [Macoratti Youtube Cha
 
 ## Clean Architecture Project Structure
 
-![ASP .Net Core Clean Architecture Structure](/img/aspc_cleanarq18.png "ASP .Net Core Clean Architecture Structure")
+![ASP .Net Core Clean Architecture Structure](/imgs/aspc_cleanarq18.png "ASP .Net Core Clean Architecture Structure")
 [Image Available here.](https://docs.microsoft.com/en-us/dotnet/architecture/modern-web-apps-azure/common-web-application-architectures)
 
 ### Application

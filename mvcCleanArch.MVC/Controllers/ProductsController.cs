@@ -69,4 +69,16 @@ public class ProductsController : Controller
         }
         return View(product);
     }
+
+    [HttpGet()]
+    public async Task<IActionResult> Details(int? id)
+    {
+        if (id == null) return NotFound();
+
+        var product = await _productService.GetById(id);
+
+        if (product == null) return NotFound();
+
+        return View(product);
+    }
 }

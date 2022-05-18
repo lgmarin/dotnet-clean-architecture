@@ -34,11 +34,17 @@ Contains the Data Access Logic with DataContext, Migrations, and Data Models.
 
 Dependencies: Domain
 
-### Infra Data
+### Infra IOC
 
 Contains the Inversion of Control Logic, grants access to the other layers via Dependency Injection.
 
 Dependencies: Domain, Application, Infra.Data
+
+### MVC
+
+Main Model View Controller project, contains the visualization layer of the web app.
+
+Dependencies: Infra.IOC, Infra.Data
 
 
 ## Dependencies

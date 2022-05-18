@@ -1,5 +1,6 @@
 using mvcCleanArch.Infra.IOC;
 using Microsoft.Extensions.Configuration;
+using mvcCleanArch.MVC.MappingConfig;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -13,6 +14,7 @@ var builder = WebApplication.CreateBuilder(args);
 //     .AddEntityFrameworkStores<ApplicationDbContext>();
 
 builder.Services.AddInfrastructure(builder.Configuration);
+builder.Services.AddAutoMapperConfiguration();
 builder.Services.AddControllersWithViews();
 
 var app = builder.Build();

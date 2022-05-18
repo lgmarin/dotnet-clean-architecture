@@ -37,4 +37,22 @@ public class ProductsController : Controller
         }
         return View(product);
     }
+
+    [HttpGet()]
+    public IActionResult Edit()
+    {
+        return View();
+    }
+
+    [HttpPost]
+    [ValidateAntiForgeryToken]
+    public IActionResult Edit([Bind("Id, Name, Description, Price")] ProductViewModel product)
+    {
+        if (ModelState.IsValid)
+        {
+            _productService.Update(product);
+            return RedirectToAction(nameof(Index));
+        }
+        return View(product);
+    }
 }

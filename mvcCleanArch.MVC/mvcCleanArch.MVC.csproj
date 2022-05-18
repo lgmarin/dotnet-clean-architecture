@@ -13,7 +13,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\mvcCleanArch.Infra.IOC\mvcCleanArch.Infra.IOC.csproj" />
-    <ProjectReference Include="..\mvcCleanArch.Infra.Data\mvcCleanArch.Infra.Data.csproj" />
+    <ProjectReference Include="..\mvcCleanArch.Application\mvcCleanArch.Application.csproj" />
   </ItemGroup>
 
   <ItemGroup>

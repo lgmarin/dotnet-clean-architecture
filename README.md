@@ -44,7 +44,7 @@ Dependencies: Domain, Application, Infra.Data
 
 Main Model View Controller project, contains the visualization layer of the web app.
 
-Dependencies: Infra.IOC, Infra.Data
+Dependencies: Infra.IOC, Application
 
 
 ## Dependencies
@@ -53,6 +53,10 @@ Dependencies: Infra.IOC, Infra.Data
 * AutoMapper
 
 ## Run
+
+```sh
+dotnet run --project mvcCleanArch.MVC
+```
 
 ## Apply Initial Migration and Update Database
 

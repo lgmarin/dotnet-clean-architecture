@@ -39,9 +39,15 @@ public class ProductsController : Controller
     }
 
     [HttpGet()]
-    public IActionResult Edit()
+    public async Task<IActionResult> Edit(int? id)
     {
-        return View();
+        if (id == null) return NotFound();
+
+        var product = await _productService.GetById(id);
+
+        if (product == null) return NotFound();
+
+        return View(product);
     }
 
     [HttpPost]
@@ -50,7 +56,15 @@ public class ProductsController : Controller
     {
         if (ModelState.IsValid)
         {
-            _productService.Update(product);
+            try
+            {
+                _productService.Update(product);
+            }
+            catch (System.Exception)
+            {
+                
+                throw;
+            }
             return RedirectToAction(nameof(Index));
         }
         return View(product);
